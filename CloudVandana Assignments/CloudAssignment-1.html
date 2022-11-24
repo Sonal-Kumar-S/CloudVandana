@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+	<head>
+		<title>
+			CloudVandana Solutions
+		</title>
+			<style>
+				table th { padding:20px; }
+				th {font-size:200%;
+					background-color:lightblue;}
+				td {text-align:center;
+					padding:10px;
+					background-color:lightgray;}
+				h1 {color:white; 
+					 }
+				
+				body { counter-reset:serial; }
+				tr td:first-child:before
+				{
+				counter-increment:serial;
+				content:counter(serial);
+				}
+				button { background-color:lightgreen; }
+			</style>
+			<script>
+				function addrowb()
+					{
+						var fname = document.getElementById('fname').value;
+						var lname = document.getElementById('lname').value;
+						var city = document.getElementById('city').value;
+						var country = document.getElementById('country').value;
+						
+						var table = document.getElementsByTagName('table')[0];
+						
+						var newRow = table.insertRow(table.rows.length);
+						
+						var cel1 = newRow.insertCell(0);
+						var cel2 = newRow.insertCell(1);
+						var cel3 = newRow.insertCell(2);
+						var cel4 = newRow.insertCell(3);
+						var cel5 = newRow.insertCell(4);
+						
+						cel2.innerHTML = fname;
+						cel3.innerHTML = lname;
+						cel4.innerHTML = city;
+						cel5.innerHTML = country;
+					}
+				function addrowt()
+					{
+						var fname = document.getElementById('fname').value;
+						var lname = document.getElementById('lname').value;
+						var city = document.getElementById('city').value;
+						var country = document.getElementById('country').value;
+						
+						var table = document.getElementsByTagName('table')[0];
+						
+						var newRow = table.insertRow(1);
+						
+						var cel1 = newRow.insertCell(0);
+						var cel2 = newRow.insertCell(1);
+						var cel3 = newRow.insertCell(2);
+						var cel4 = newRow.insertCell(3);
+						var cel5 = newRow.insertCell(4);
+						
+						cel2.innerHTML = fname;
+						cel3.innerHTML = lname;
+						cel4.innerHTML = city;
+						cel5.innerHTML = country;
+					}	
+			</script>
+	</head>
+	<body>
+	
+		<marquee scrollamount="15" bgcolor="black" 
+		direction="right"><h1><u><i><center>A. CloudVandana Solutions Assignment Table-1</center></i></u></h1></marquee>
+		
+		<center><table width=80%; border=1px>
+			<tr><center>
+				<th>SL No.</th><br>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th width=200;>City</th>
+				<th>Country</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Sonal</td>
+				<td>Kumar S</td>
+				<td>Mysore</td>
+				<td>India</td>
+			</tr> 
+			<tr>
+				<td></td>
+				<td>Suman</td>
+				<td>Kumari S</td>
+				<td>Banglore</td>
+				<td>India</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Kamalesh</td>
+				<td>Sharma</td>
+				<td>Mandya</td>
+				<td>India</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Karthik</td>
+				<td>Mandal</td>
+				<td>Florida</td>
+				<td>USA</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>Naveen</td>
+				<td>Rao</td>
+				<td>Toronto</td>
+				<td>Canada</td>
+			</tr>
+		</table></center><br>
+		
+		<marquee scrollamount="15" bgcolor="black"
+		direction="right"><h1><u><i><center>B. Row Buttons(Top-Bottom)</center></i></u></h1></marquee><br>
+		
+		<center><h2>Add the details below :</h2></center>
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		<b>First Name</b>: <input type="text" name="fname" id="fname" />&emsp;
+		<b>Last Name</b>: <input type="text" name="lname" id="lname" />&emsp;
+		<b>City</b>: <input type="text" name="city" id="city" />&emsp;
+		<b>Country</b>: <input type="text" name="country" id="country" /><br><br><br>
+		
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+		
+		<button onclick="addrowb();"><b>Add Row To Bottom</b></button>&emsp;&emsp;&emsp;
+		<button onclick="addrowt();"><b>Add Row To Top</b></button>
+	
+	</body>
+</html>

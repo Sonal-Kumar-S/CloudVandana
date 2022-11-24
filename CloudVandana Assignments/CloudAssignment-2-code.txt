@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<head>
+		<title>
+			CloudVandana Solutions
+		</title>
+		<style>
+			h1 { 
+				padding:25px;
+				color:black;}
+			button { background-color:lightgreen; }
+			
+			<script>
+ 
+				function complete()
+				{
+					var sentence = prompt("senn");
+					var letter = prompt("lett");
+					
+					var position = sentence.indexOf(letter);
+					var result = sentence.substring(position , sentence.length+sentence);
+					document.getElementById("nott").innerHTML = result;
+				} 
+</script>
+		</style>
+	</head>
+	<body>
+	
+		<marquee scrollamount="15" bgcolor="red"><h1><u><i><center>C. CloudVandana Solutions Assignment-2</center></i></u></h1></marquee>
+		<br><br><br>
+		
+		<form>
+		<b>Enter a Sentence </b>: <input type="text" name="senn" id="senn" placeholder="Sentence"/>&emsp;&emsp;&emsp; 
+		<b>Enter a Letter </b>: <input type="text" name="lett" id="lett" placeholder="Letter"/>&emsp;&emsp;&emsp;
+	
+		<button onclick="complete(); value="submit"><b>Submit</b></button>
+		</form><br>
+		
+		<p>Answer = <input type="text" name="nott" id="nott"/></p>
+	
+	</body>
